@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{% static 'img/cuesalogo.png'%}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body>
+<div>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-shrink ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <img src="{% static 'img/cuesaa.png' %}" alt="" style="width: 35px; hight: 35px;">
+        {% url 'public:home' as home %}
+        <a class="navbar-brand" href="{{ home }}">Home</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item active">
+
+        </li>
+
+         <li class="nav-item">
+
+        </li>
+
+         <li class="nav-item">
+            {% if user.is_superuser %}
+            <a class="nav-link enabled" href="{% url 'document' %}" tabindex="-1" aria-disabled="false">Agregar Docente</a>
+            {% else %}
+             <a class="nav-link enabled" href="{% url 'document' %}" tabindex="-1" aria-disabled="false" hidden></a>
+            {% endif %}
+         </li>
+                <li class="nav-item">
+            {% if user.is_superuser %}
+            <a class="nav-link enabled" href="{% url 'pdf' %}" tabindex="-1" aria-disabled="false">Reportes</a>
+            {% else %}
+             <a class="nav-link enabled" tabindex="-1" aria-disabled="false" hidden></a>
+            {% endif %}
+         </li>
+            </ul>
+
+
+
+
+      {% if user.is_authenticated  %}
+
+        {% url 'profile' as profile_url %}
+        <div style="margin-right: 30px;">
+        <span style="float:right; color:white;" class="sr_only" >Welcome {% if request.path == profile_url %}{{user.username}}{%else%}<a href=" " style="color: white;">{{user.username}}</a></span>
+        </div>
+      {% endif %}
+
+      <a  href="{% url 'logout' %}" style="background: #b9935a; " class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="false" >Logout</a>
+      {% else %}
+        <div >
+        <a style="background: #b9935a;"   href="{% url 'login'%}" class="btn btn-primary btn-sm " tabindex="-1" role="button" aria-disabled="true">Login</a>
+            </div>
+      {% endif %}
+  </div>
+</nav>
+    </div>
+
+</body>
+</html>
