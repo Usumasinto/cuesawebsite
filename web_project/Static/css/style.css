@@ -1,14 +1,7 @@
 body{
  /* Background Gradient for Monochromatic Colors */
-    animation: animateBg 15s linear infinite;
-    background-image: linear-gradient(0deg,#FFCE9D,#A65403,#FFCE9D);
-  background-size: 100% 1100%;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#A65403, endColorstr=#A65403)" no-repeat;
+  background:black;
 
-}
-    @keyframes animateBg {
-  0% { background-position: 0% 0%; }
-  100% { background-position: 0% 100%; }
 }
 .title {
     color : white;
@@ -18,10 +11,13 @@ body{
 
 .contact-section {
   padding-top: 5rem;
+
+
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  background: gray;
+  border-bottom: 0.25rem solid gold;
 }
 .contact-section .card h4 {
   font-size: 0.8rem;
@@ -41,10 +37,10 @@ body{
   text-align: center;
   height: 3rem;
   width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: gold;
   border-radius: 100%;
   line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: black;
 }
 .contact-section .social a:hover {
   color: rgba(255, 255, 255, 0.5);
@@ -56,6 +52,8 @@ body{
 .footer {
   padding: 5rem 0;
 }
+
+
 
 
 

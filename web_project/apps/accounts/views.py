@@ -87,6 +87,7 @@ def renderPdf(request):
 
         result = request.POST.get('data', None)
         data2 = request.POST.get('data2', None)
+        date = request.POST.get('date', None)
         context['data'] = result
         context2 = {}
 
@@ -97,7 +98,8 @@ def renderPdf(request):
             "clase": "",
             "carrera": "",
             "ciclo": "",
-            'data2': data2
+            'data2': data2,
+            'date': date,
         }
 
         docente = str(result).split(",")
@@ -117,7 +119,7 @@ def renderPdf(request):
         template = get_template('accounts/renderPdf.html')
         html = template.render(docenteEntry)
 
-        qr = qrcode.QRCode(version=1, box_size=5, border=5)
+        qr = qrcode.QRCode(version=1, box_size=1, border=1)
         qr.add_data(docenteEntry)
         qr.make(fit=True)
 

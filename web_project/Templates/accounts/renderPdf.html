@@ -29,45 +29,76 @@
 
             /* for debugging the layout */
         }
+        @frame footer_frame {           /* Another static Frame */
+            -pdf-frame-content: footer_content;
+            left: 50pt; width: 512pt; top: 772pt; height: 20pt;
+        }
 
     }
     </style>
 </head>
 <br><br><br>
 <div id = "header_content"><img src="web_project/Static/img/CUESA.jpeg" style="width: 150px; height: 150px;">
-</div><br><br><br>
+</div><br><br>
 <strong style="font-size: 10pt;">{{name}} {{lastname}}</strong><br>
 <strong style="font-size: 10pt; ">PRESENTE</strong><br><br><br>
 
 <div id="parrafo">
-<p style="font-size: 9pt; text-align: justify;" >El centro Universitario de Estudios de la Salud de Aguascalientes constituye la
+<p style="font-family:Arial; font-size: 10pt; text-align: justify;" >El Centro Universitario de Estudios de la Salud de Aguascalientes constituye la
     única Institución de Educación Superior en el Estado de Aguascalientes dedicada
     exclusivamente a la formación de personal que se encontrará encargado de la
     atención a la salud.</p>
 
-<p style="font-size: 9pt; text-align: justify;">La Participación de usted como docente en nuestra institución constituyó un pilar
+<p style="font-family:Arial; font-size: 10pt; text-align: justify;">La Participación de usted como docente en nuestra institución constituyó un pilar
 fundamental no solo en el aprendizaje sino también en la formación como profesionistas de los jóvenes que conforman la Comunidad Estudiantil de CUESA.</p>
-<p style="font-size: 9pt; text-align: justify;">En seguimiento a lo anteriormente descrito, el Centro Universitario de Estudios de la Salud de Aguascalientes hace consultar su valiosa participación
-    como <strong>Docente</strong> al haber impartido la asignatura <strong>{{clase}}</strong> dentro del Plan de Estudios de la <strong>{{carrera}}</strong>
-durante el Ciclo Escolar <strong>{{ciclo}}</strong>.</p>
+<p style=" font-family:Arial; font-size: 10pt; text-align: justify;">En seguimiento a lo anteriormente descrito, el Centro Universitario de Estudios de la Salud de Aguascalientes hace consultar su valiosa participación
+    como <strong><em>Docente</em></strong> al haber impartido la asignatura <strong><em>{{clase}}</em></strong> dentro del Plan de Estudios de la <strong><em>{{carrera}}</em></strong>
+    durante el Ciclo Escolar <strong><em>{{ciclo}}</em></strong>.</p>
 
-<p style="font-size: 9pt; text-align: justify;">Agradeciendo el apoyo que otorgó no solo a nuestra institución sino a la comunidad
+<p style="font-family:Arial; font-size: 10pt; text-align: justify;">Agradeciendo el apoyo que otorgó no solo a nuestra institución sino a la comunidad
 de Aguascalientes al participar en el desarrollo de una nueva generación de profesionistas del Área de la Salud de excelencia, esperamos en un futuro contar
 nuevamente con su presencia en CUESA.</p>
 
-<p style="font-size: 9pt; text-align: justify;">Me despido enviándole un cordial y afectuoso saludo, invitándolo para que, al igual que un servidor, llevemos a CUESA en el corazón.</p>
-<p style="font-size: 9pt; text-align: justify;">Se extiende la presente para los fines que al interesado convengan a los fecha</p><br><br><br><br>
-<center><strong style="font-size: 9pt; text-align: justify;">ATENTAMENTE</strong></center><br><br><br><br>
-<center>_____________________________________________________</center><br>
-<center><strong style="font-size: 9pt; text-align: justify;">Dr Oswaldo Guillermo Navarro García</strong></center>
-<center><strong style="font-size: 9pt; text-align: justify;">Director de Andragogía y Diseño Curricular</strong></center>
-<center><strong style="font-size: 9pt; text-align: justify;">Centro Universitario de Estudios de la Salud de Aguascalientes</strong></center>
-</div><br><br><br><br><br>
+<p style="font-family:Arial; font-size: 10pt; text-align: justify;">Me despido enviándole un cordial y afectuoso saludo, invitándolo para que, al igual que un servidor, llevemos a CUESA en el corazón.</p>
+<p style="font-family:Arial; font-size: 10pt; text-align: justify;">Se extiende la presente para los fines que al interesado convengan a los {{date}}</p><br><br><br><br>
+<center><strong style=" font-family:Arial; font-size: 10pt; text-align: justify;">ATENTAMENTE</strong></center><br><br>
+<center>_____________________________________________________</center>
+<center><strong style=" font-family:Arial; font-size: 10pt; text-align: justify;">Dr Oswaldo Guillermo Navarro García</strong></center>
+<center><strong style="font-family:Arial; font-size: 10pt; text-align: justify;">Director de Andragogía y Diseño Curricular</strong></center>
+<center><strong style=" font-family:Arial; font-size: 10pt; text-align: justify;">Centro Universitario de Estudios de la Salud de Aguascalientes</strong></center>
+</div><br><br>
+
+<div id="footer_content">
+    <p><center>Valente Arteaga No. 305-4,Col. Obraje, Aguascalientes, Ags. México, C.P.20230.(449) 688 85 30, 145 43 02 y 03 Ext.350</center></p>
+<p>www.cuesa.com.mx</p>
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
-<p>Valente Arteaga No. 305-4,Col. Obraje, Aguascalientes, Ags. México, C.P.20230.(449) 688 85 30, 145 43 02 y 03 Ext.350</p>
-<center> <p>www.cuesa.com.mx</p></center>
+
+<div  style="
+   width:50px;
+   height:1000px;
+   border:3px solid brown;
+   border-radius:22px;
+
+
+   "><p style=" font-family:Arial;font-size: 7pt;
+    text-align: justify;">{{data2}}</p> </div>
+
+
+<img src="../CuesaWebsite/qr.png">
+
+
+
 </body>
-{{data2}}
-<img src="/Users/danielramirez/Desktop/CuesaWebsite/qr.png">
+
+
+
+
+
+
+
+
+
+
 </html>
