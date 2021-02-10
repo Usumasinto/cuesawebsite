@@ -2,15 +2,18 @@
 
 <html>
 <head>
+
 <meta charset="UTF-8" >
     <title>pdf</title>
 
 
     <style>
 
+      @page {
 
-           @page {
         size: a4 portrait;
+
+
 
         @frame header_frame  {
             -pdf-frame-content: header_content;
@@ -27,16 +30,51 @@
             top: 50pt;
             height: 692pt;
 
+
             /* for debugging the layout */
         }
         @frame footer_frame {           /* Another static Frame */
             -pdf-frame-content: footer_content;
             left: 50pt; width: 512pt; top: 772pt; height: 20pt;
         }
+        #headerContent {
+    text-align: center;
+
+}
+
+
+
 
     }
+
+    @page p2{
+
+
+
+        @frame content_frame {
+            left: 20pt;
+            width: 550pt;
+            top: 300pt;
+            height: 692pt;
+                 -pdf-frame-content: plantilla;
+
+
+
+
+
+            /* for debugging the layout */
+        }
+
+
+
+    }
+
+
+
+
     </style>
 </head>
+<body>
 <br><br><br>
 <div id = "header_content"><img src="web_project/Static/img/CUESA.jpeg" style="width: 150px; height: 150px;">
 </div><br><br>
@@ -60,45 +98,51 @@ de Aguascalientes al participar en el desarrollo de una nueva generación de pro
 nuevamente con su presencia en CUESA.</p>
 
 <p style="font-family:Arial; font-size: 10pt; text-align: justify;">Me despido enviándole un cordial y afectuoso saludo, invitándolo para que, al igual que un servidor, llevemos a CUESA en el corazón.</p>
-<p style="font-family:Arial; font-size: 10pt; text-align: justify;">Se extiende la presente para los fines que al interesado convengan a los {{date}}</p><br><br><br><br>
+<p style="font-family:Arial; font-size: 10pt; text-align: justify;">Se extiende la presente para los fines que al interesado convengan a los {{date}}</p><br><br>
 <center><strong style=" font-family:Arial; font-size: 10pt; text-align: justify;">ATENTAMENTE</strong></center><br><br>
 <center>_____________________________________________________</center>
 <center><strong style=" font-family:Arial; font-size: 10pt; text-align: justify;">Dr Oswaldo Guillermo Navarro García</strong></center>
 <center><strong style="font-family:Arial; font-size: 10pt; text-align: justify;">Director de Andragogía y Diseño Curricular</strong></center>
 <center><strong style=" font-family:Arial; font-size: 10pt; text-align: justify;">Centro Universitario de Estudios de la Salud de Aguascalientes</strong></center>
+                <div style="width: 90px; height: 90px; margin-left: 470px;"> <img src="../CuesaWebsite/qr.png" style=" margin-right: 50px; width: 90px; height: 90px;"></div>
+
 </div><br><br>
 
 <div id="footer_content">
     <p><center>Valente Arteaga No. 305-4,Col. Obraje, Aguascalientes, Ags. México, C.P.20230.(449) 688 85 30, 145 43 02 y 03 Ext.350</center></p>
 <p>www.cuesa.com.mx</p>
-</div><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<pdf:nextpage name="p2"/>
+<br><br><br><br><br>
+
+  <table border="0px" class="tabla" style="  margin-top: 350px; margin-left:center;    " >
+
+    <tr style="height: 20px; border: none; width: 400px; ">
+        <td style="text-align: right; ">DATOS DE AUTENTIFICACIÓN</td>
+    </tr>
+    <tr style="width: 400px; border: none;">
+        <td style="width: 400px;  margin-left: 100px;">
+            <div style=" font-family:Arial;font-size: 8.5pt;
+            text-align: justify; ">
+                {{data2}}
+            </div>
+        </td>
+        <td style="width: 400px; margin-right: 1px; border: none;">
+            <div style="text-align: center;   ">
+                <img src="../CuesaWebsite/qr.png" style="width: 150px; height: 150px;">
+            </div>
+        </td>
+    </tr>
+</table>
 
 
 
-<div  style="
-   width:50px;
-   height:1000px;
-   border:3px solid brown;
-   border-radius:22px;
-
-
-   "><p style=" font-family:Arial;font-size: 7pt;
-    text-align: justify;">{{data2}}</p> </div>
-
-
-<img src="../CuesaWebsite/qr.png">
+<div id="plantilla"  >
+    <div style="height: 500px; margin-top: 200px;"><img src="/Users/danielramirez/Desktop/CuesaWebsite/plantilla.png" style="opacity: 0.2;"></div>
+</div>
 
 
 
 </body>
-
-
-
-
-
-
-
-
-
 
 </html>
