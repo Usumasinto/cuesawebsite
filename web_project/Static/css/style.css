@@ -1,6 +1,6 @@
 body{
  /* Background Gradient for Monochromatic Colors */
-  background:white;
+   background: #E5B169;
 
 }
 .title {
@@ -16,7 +16,7 @@ body{
 }
 .contact-section .card {
   border: 0;
-  background: gray;
+  background: white;
   border-bottom: 0.25rem solid gold;
 }
 .contact-section .card h4 {
